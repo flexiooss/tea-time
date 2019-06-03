@@ -1,7 +1,6 @@
 # Tea-time
 
-A time picker based on Hidenburg.
-You can select a time between 00:00 and 23h59
+A time picker based on Hidenburg
 
 ## Utilisation
 

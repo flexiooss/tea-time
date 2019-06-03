@@ -21,8 +21,7 @@
     "@flexio-oss/js-type-helpers": "0.0.0",
     "@flexio-oss/js-logger": "0.0.0",
     "@flexio-oss/js-helpers": "0.0.0",
-    "@flexio-oss/assert": "0.0.0",
-    "flexio-jshelpers": "https://github.com/flexiooss/flexio-jshelpers.git"
+    "@flexio-oss/assert": "0.0.0"
   },
   "hotballoon-shed": {
     "builder": "webpack4",
