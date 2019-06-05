@@ -14,13 +14,14 @@ export class TimePicker extends Component{
       .withComponentContext(config.getComponentContext())
       .withStore(storeGenerator.generate())
       .withLayersManager(config.getLayersManager())
-      // .withProperties({
-      //   multiple: false,
-      //   search: false,
-      //   autoUpdateItems: true,
-      //   pagination: false,
-      //   autoCloseListNotMultiple: true
-      // })
+      .withProperties({
+        multiple: false,
+        search: true,
+        autoUpdateItems: true,
+        pagination: false,
+        autoCloseListNotMultiple: true,
+        placeholder: 'Choisir une heure'
+      })
 
     this.__select = new ComponentSelect(configSelect)
   }
