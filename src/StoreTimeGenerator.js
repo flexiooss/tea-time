@@ -32,7 +32,9 @@ export class StoreTimeGenerator {
   }
 
   __generateId(minutes) {
-    return '' + this.__getHours(minutes) + '' + this.__getMinutes(minutes)
+    let hours = this.__getHours(minutes)
+    hours = (hours.length > 1) ? hours : '0' + hours
+    return hours + '' + this.__getMinutes(minutes)
   }
 
   __generateValue(minutes) {
