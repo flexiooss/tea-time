@@ -1,12 +1,24 @@
 /* global runTest */
 import {TestCase} from 'code-altimeter-js'
 import {StoreTimeGenerator} from "../src/StoreTimeGenerator";
+import {TimePickerConfig} from "../src/TimePickerConfig";
 
 const assert = require('assert')
 
 class TestGenerator extends TestCase {
+  testTimePickerConfigPeriod() {
+    assert.throws(() => new TimePickerConfig().setPeriod("151"), "Period is a number")
+    assert.throws(() => new TimePickerConfig().setPeriod(0), "Period > 0")
+    assert.throws(() => new TimePickerConfig().setPeriod(-1), "Period > 0")
 
-  setUp() {
+    let config = new TimePickerConfig().setPeriodHours();
+    assert.strictEqual(config.getPeriod(), 60)
+
+    config = new TimePickerConfig().setPeriodHalfHour();
+    assert.strictEqual(config.getPeriod(), 30)
+
+    config = new TimePickerConfig().setPeriodMinute();
+    assert.strictEqual(config.getPeriod(), 1)
   }
 
   testPeriodHour() {

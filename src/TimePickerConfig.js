@@ -55,6 +55,7 @@ export class TimePickerConfig {
    */
   setPeriod(period) {
     assert(isNumber(period), 'Period must be a number')
+    assert(period > 0, 'Period must be > 0')
     this.__period = period
     return this
   }
